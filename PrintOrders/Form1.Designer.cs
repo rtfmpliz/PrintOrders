@@ -34,7 +34,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dtFromDate = new System.Windows.Forms.DateTimePicker();
             this.dtToDate = new System.Windows.Forms.DateTimePicker();
-            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contactNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +42,7 @@
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -92,6 +92,7 @@
             this.dtFromDate.Name = "dtFromDate";
             this.dtFromDate.Size = new System.Drawing.Size(200, 20);
             this.dtFromDate.TabIndex = 3;
+            this.dtFromDate.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             // 
             // dtToDate
             // 
@@ -99,10 +100,6 @@
             this.dtToDate.Name = "dtToDate";
             this.dtToDate.Size = new System.Drawing.Size(200, 20);
             this.dtToDate.TabIndex = 4;
-            // 
-            // ordersBindingSource
-            // 
-            this.ordersBindingSource.DataSource = typeof(PrintOrders.Orders);
             // 
             // orderIDDataGridViewTextBoxColumn
             // 
@@ -151,6 +148,10 @@
             this.orderDateDataGridViewTextBoxColumn.DataPropertyName = "OrderDate";
             this.orderDateDataGridViewTextBoxColumn.HeaderText = "OrderDate";
             this.orderDateDataGridViewTextBoxColumn.Name = "orderDateDataGridViewTextBoxColumn";
+            // 
+            // ordersBindingSource
+            // 
+            this.ordersBindingSource.DataSource = typeof(PrintOrders.Orders);
             // 
             // Form1
             // 

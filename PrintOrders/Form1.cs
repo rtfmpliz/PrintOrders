@@ -15,8 +15,9 @@ namespace PrintOrders
 {
     public partial class Form1 : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=NORTHWIND;Integrated Security=True;");
-        string constr = "Data Source=.;Initial Catalog=NORTHWIND;User Id=sa;Password=P@ssw0rd;";
+        //SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=NORTHWIND;Integrated Security=True;");
+        //string constr = "Data Source=localhost;Initial Catalog=NORTHWIND;User Id=sa;Password=P@ssw0rd;";
+        //string constr = "Data Source=localhost;Initial Catalog=NORTHWIND;Trusted_Connection=True;";
         public Form1()
         {
             InitializeComponent();
@@ -24,8 +25,8 @@ namespace PrintOrders
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            //using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString))
-            using (IDbConnection db = new SqlConnection(constr))
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString))
+            //using (IDbConnection db = new SqlConnection(constr))
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
@@ -42,8 +43,8 @@ namespace PrintOrders
             Orders obj = ordersBindingSource.Current as Orders;
             if (obj != null)
             {
-                //using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString))
-                using (IDbConnection db = new SqlConnection(constr))
+                using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString))
+                //using (IDbConnection db = new SqlConnection(constr))
                 {
                     if (db.State == ConnectionState.Closed)
                         db.Open();
